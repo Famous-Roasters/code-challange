@@ -1,0 +1,16 @@
+Resources:
+  ProductEventsFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: target/lambda-store-1.0-SNAPSHOT.jar
+      Handler: fr.aws.lambdastore.Handler::handleRequest
+      Runtime: java8
+      MemorySize: 512
+      Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
+        Variables:
+          S3_BUCKET_ENV: staging
+          ACCESS_KEY: {REDACTED}
+          SECRET_KEY: {REDACTED}
+          DB_URL: jdbc:postgresql://localhost:5432/postgres
+          DB_USERNAME: postgres
+          DB_PASSWORD: password
