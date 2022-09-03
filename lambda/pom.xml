@@ -51,7 +51,7 @@
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-eventbridge</artifactId>
-      <version>1.12.278</version>
+      <version>1.12.281</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-s3 -->
     <dependency>
